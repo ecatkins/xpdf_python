@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "INSTALLING XPDF"
 cd /tmp/
 wget ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-mac-3.04.tar.gz
 tar -xvzf xpdfbin-mac-3.04.tar.gz

@@ -1,6 +1,9 @@
 from setuptools import setup, find_packages
 from codecs import open
 from os import path
+import sys
+import subprocess
+from setuptools.command.install import install
 
 
 __version__ = '0.0.1'
@@ -14,6 +17,24 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 # get the dependencies and installs
 with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
     all_reqs = f.read().split('\n')
+
+
+class XPDFInstall(install):
+    def run(self):
+        if path.isfile('/usr/local/bin/pdftotext'):
+            print("Detected xpdf library.")
+        else:
+            print("Did not detect xpdf library. Now attempting to install...")
+            try:
+                if sys.platform.startswith('linux'):
+                    bash_script = 'linux_install.sh'
+                elif sys.platform.startswith('darwin'):
+                    bash_script = 'mac_install.sh'
+                full_path = path.join(path.join(here,'xpdf_python/install_xpdf/'), bash_script)
+                subprocess.call(['bash',full_path])
+            except Exception as e:
+                print(e)
+                print("Error installing xpdf.  Please follow custom installation instructions at: https://github.com/ecatkins/xpdf_python.")
 
 install_requires = [x.strip() for x in all_reqs if 'git+' not in x]
 dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startswith('git+')]
@@ -37,5 +58,12 @@ setup(
     author='Edward Atkins',
     install_requires=install_requires,
     dependency_links=dependency_links,
-    author_email='ecatkins@gmail.com'
+    author_email='ecatkins@gmail.com',
+    #run custom code
+    package_data = {
+        'install_xpdf':['install_xpdf/mac_install.sh','install_xpdf/linux_install.sh']
+    },
+    cmdclass={'install': XPDFInstall},
 )
+
+
