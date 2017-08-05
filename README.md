@@ -23,7 +23,9 @@ Or clone the repo:
     $ python setup.py install
 
 
-Must first use install xpdf using 1) instructions for your OS found [here](http://www.foolabs.com/xpdf/download.html) OR 2) the bash scripts found in this repo's install_xpdf subdirectory
+Must first use install xpdf using:
+1. Instructions for your OS found [here](http://www.foolabs.com/xpdf/download.html) OR 
+2. The bash scripts found in this repo's install_xpdf subdirectory
     
 Supported by
 ------------
