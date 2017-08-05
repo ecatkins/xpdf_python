@@ -21,20 +21,22 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 
 class XPDFInstall(install):
     def run(self):
-        if path.isfile('/usr/local/bin/pdftotext'):
-            print("Detected xpdf library sure.")
-        else:
-            print("Did not detect xpdf library. Now attempting to install...")
-            try:
+        try:
+            if path.isfile('/usr/local/bin/pdftotext'):
+                print("Detected xpdf library sure.")
+            else:
+                print("Did not detect xpdf library. Now attempting to install...")
                 if sys.platform.startswith('linux'):
                     bash_script = 'linux_install.sh'
                 elif sys.platform.startswith('darwin'):
                     bash_script = 'mac_install.sh'
                 full_path = path.join(path.join(here,'xpdf_python/install_xpdf/'), bash_script)
                 subprocess.call(['bash',full_path])
-            except Exception as e:
-                print(e)
-                print("Error installing xpdf.  Please follow custom installation instructions at: https://github.com/ecatkins/xpdf_python.")
+        except Exception as e:
+            print(e)
+            print("Error installing xpdf.  Please follow custom installation instructions at: https://github.com/ecatkins/xpdf_python.")
+        else:
+            install.run(self)
 
 install_requires = [x.strip() for x in all_reqs if 'git+' not in x]
 dependency_links = [x.strip().replace('git+', '') for x in all_reqs if x.startswith('git+')]
