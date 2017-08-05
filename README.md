@@ -23,12 +23,13 @@ Or clone the repo:
     $ python setup.py install
 
 
-Must first use install xpdf using 1) instructions for your OS found (here) [http://www.foolabs.com/xpdf/download.html] OR 2) the bash scripts found in the install_xpdf subdirectory
+Must first use install xpdf using 1) instructions for your OS found [here](http://www.foolabs.com/xpdf/download.html) OR 2) the bash scripts found in this repo's install_xpdf subdirectory
     
 Supported by
 ------------
 
-(Dealstat REI) [http://dealstatrei.com/] <img src="dealstat-logo.png" width="100">
+<img src="dealstat-logo.png" width="100">
+[Dealstat REI](http://dealstatrei.com/)
 
 OS
 ------------
