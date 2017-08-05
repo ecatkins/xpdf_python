@@ -12,10 +12,13 @@ Python wrapper for xpdf
 Installation / Usage
 --------------------
 
-To install use pip:
+To install using pip from pypi:
 
     $ pip install xpdf_python
 
+To install using pip from github:
+
+    $ pip install git+https://github.com:/ecatkins/xpdf_python
 
 Or clone the repo:
 
