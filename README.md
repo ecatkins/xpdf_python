@@ -28,7 +28,7 @@ Must first use install xpdf using 1) instructions for your OS found (here) [http
 Supported by
 ------------
 
-(Dealstat REI) [http://dealstatrei.com/] ![Dealstat Logo](dealstat-logo.png)
+(Dealstat REI) [http://dealstatrei.com/] <img src="dealstat-logo.png" width="100">
 
 OS
 ------------
