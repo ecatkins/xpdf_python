@@ -65,7 +65,7 @@ setup(
     package_data = {
         'install_xpdf':['install_xpdf/mac_install.sh','install_xpdf/linux_install.sh']
     },
-    # cmdclass={'install': XPDFInstall},
+    cmdclass={'install': XPDFInstall},
 )
 
 
