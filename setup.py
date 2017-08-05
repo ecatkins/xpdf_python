@@ -22,7 +22,7 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 class XPDFInstall(install):
     def run(self):
         if path.isfile('/usr/local/bin/pdftotext'):
-            print("Detected xpdf library.")
+            print("Detected xpdf library sure.")
         else:
             print("Did not detect xpdf library. Now attempting to install...")
             try:
@@ -63,7 +63,7 @@ setup(
     package_data = {
         'install_xpdf':['install_xpdf/mac_install.sh','install_xpdf/linux_install.sh']
     },
-    cmdclass={'install': XPDFInstall},
+    # cmdclass={'install': XPDFInstall},
 )
 
 
