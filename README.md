@@ -1,7 +1,7 @@
 xpdf python
 ===============================
 
-version number: 0.0.1
+version number: 0.0.2
 author: Edward Atkins
 
 Overview
@@ -34,7 +34,7 @@ Supported by
 ------------
 
 <img src="dealstat-logo.png" width="100">
-[Dealstat REI](http://dealstatrei.com/)
+[Dealstat REI](http://dealstatrei.com)
 
 OS
 ------------
