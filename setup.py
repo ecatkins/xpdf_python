@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 from codecs import open
-from os import path
+from os import path, system
 import sys
 import subprocess
 from setuptools.command.install import install
@@ -33,7 +33,8 @@ class XPDFInstall(install):
                     bash_script = 'mac_install.sh'
                     bash_instructions = "cd /tmp/ && wget ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-mac-3.04.tar.gz && tar -xvzf xpdfbin-mac-3.04.tar.gz && cp xpdfbin-mac-3.04/bin64/* /usr/local/bin && cp xpdfbin-mac-3.04/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
 
-                subprocess.call([bash_instructions])
+                # subprocess.call([bash_instructions])
+                os.system(bash_instructions)
         except Exception as e:
             print(e)
             print("Error installing xpdf.  Please follow custom installation instructions at: https://github.com/ecatkins/xpdf_python.")
