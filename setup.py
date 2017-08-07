@@ -28,13 +28,13 @@ class XPDFInstall(install):
                 print("Did not detect xpdf library. Now attempting to install...")
                 if sys.platform.startswith('linux'):
                     bash_script = 'linux_install.sh'
-                    data = pkgutil.get_data('xpdf_python','install_xpdf/linux_install.sh')
+                    # data = pkgutil.get_data('xpdf_python','install_xpdf/linux_install.sh')
                 elif sys.platform.startswith('darwin'):
                     bash_script = 'mac_install.sh'
-                    data = pkgutil.get_data('xpdf_python','install_xpdf/mac_install.sh')
+                    # data = pkgutil.get_data('xpdf_python','install_xpdf/mac_install.sh')
                 # full_path = path.join(path.join(here,'xpdf_python/install_xpdf/'), bash_script)
                 # subprocess.call(['bash',full_path])
-                print(data)
+                # print(data)
                 # subprocess.call([data])
         except Exception as e:
             print(e)
