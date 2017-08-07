@@ -22,9 +22,20 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 class XPDFInstall(install):
     def run(self):
         try:
-            print("GETTING HERE")
+            print("ONCE")
             data = pkgutil.get_data('install_xpdf','install_xpdf/mac_install.sh')
             print(data)
+        except:
+            pass
+
+        try:
+            print("TWICE")
+            data = pkgutil.get_data('xpdf_python','install_xpdf/mac_install.sh')
+            print(data)
+        except:
+            pass
+
+        try:
             if path.isfile('/usr/local/bin/pdftotext'):
                 print("Detected xpdf library.")
             else:
