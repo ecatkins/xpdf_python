@@ -6,7 +6,7 @@ import subprocess
 from setuptools.command.install import install
 
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 
 here = path.abspath(path.dirname(__file__))
 
