@@ -22,34 +22,18 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 class XPDFInstall(install):
     def run(self):
         try:
-            print("ONCE")
-            data = pkgutil.get_data('install_xpdf','install_xpdf/mac_install.sh')
-            print(data)
-        except:
-            pass
-
-        try:
-            print("TWICE")
-            data = pkgutil.get_data('xpdf_python','install_xpdf/mac_install.sh')
-            print(data)
-        except:
-            pass
-
-        try:
             if path.isfile('/usr/local/bin/pdftotext'):
                 print("Detected xpdf library.")
             else:
                 print("Did not detect xpdf library. Now attempting to install...")
                 if sys.platform.startswith('linux'):
                     bash_script = 'linux_install.sh'
-                    # data = pkgutil.get_data('xpdf_python','install_xpdf/linux_install.sh')
+                    bash_instructions = "cd /tmp/ && wget ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-linux-3.04.tar.gz && tar -xvzf xpdfbin-linux-3.04.tar.gz && cp xpdfbin-linux-3.04/bin64/* /usr/local/bin && cp xpdfbin-linux-3.04/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
                 elif sys.platform.startswith('darwin'):
                     bash_script = 'mac_install.sh'
-                    # data = pkgutil.get_data('xpdf_python','install_xpdf/mac_install.sh')
-                # full_path = path.join(path.join(here,'xpdf_python/install_xpdf/'), bash_script)
-                # subprocess.call(['bash',full_path])
-                # print(data)
-                # subprocess.call([data])
+                    bash_instructions = "cd /tmp/ && wget ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-mac-3.04.tar.gz && tar -xvzf xpdfbin-mac-3.04.tar.gz && cp xpdfbin-mac-3.04/bin64/* /usr/local/bin && cp xpdfbin-mac-3.04/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
+
+                subprocess.call([bash_instructions])
         except Exception as e:
             print(e)
             print("Error installing xpdf.  Please follow custom installation instructions at: https://github.com/ecatkins/xpdf_python.")
