@@ -22,18 +22,19 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 class XPDFInstall(install):
     def run(self):
         try:
-            data = pkgutil.get_data('xpdf_python','install_xpdf/linux_install.sh')
-            print(data)
             if path.isfile('/usr/local/bin/pdftotext'):
                 print("Detected xpdf library.")
             else:
                 print("Did not detect xpdf library. Now attempting to install...")
                 if sys.platform.startswith('linux'):
                     bash_script = 'linux_install.sh'
+                    data = pkgutil.get_data('xpdf_python','install_xpdf/linux_install.sh')
                 elif sys.platform.startswith('darwin'):
                     bash_script = 'mac_install.sh'
-                full_path = path.join(path.join(here,'xpdf_python/install_xpdf/'), bash_script)
-                subprocess.call(['bash',full_path])
+                    data = pkgutil.get_data('xpdf_python','install_xpdf/linux_install.sh')
+                # full_path = path.join(path.join(here,'xpdf_python/install_xpdf/'), bash_script)
+                # subprocess.call(['bash',full_path])
+                subprocess.call([data])
         except Exception as e:
             print(e)
             print("Error installing xpdf.  Please follow custom installation instructions at: https://github.com/ecatkins/xpdf_python.")
