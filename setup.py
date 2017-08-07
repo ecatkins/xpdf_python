@@ -35,7 +35,7 @@ class XPDFInstall(install):
                 # full_path = path.join(path.join(here,'xpdf_python/install_xpdf/'), bash_script)
                 # subprocess.call(['bash',full_path])
                 print(data)
-                subprocess.call([data])
+                # subprocess.call([data])
         except Exception as e:
             print(e)
             print("Error installing xpdf.  Please follow custom installation instructions at: https://github.com/ecatkins/xpdf_python.")
