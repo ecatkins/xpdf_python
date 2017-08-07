@@ -23,7 +23,7 @@ class XPDFInstall(install):
     def run(self):
         try:
             print("GETTING HERE")
-            data = pkgutil.get_data('xpdf_python','install_xpdf/mac_install.sh')
+            data = pkgutil.get_data('install_xpdf','install_xpdf/mac_install.sh')
             print(data)
             if path.isfile('/usr/local/bin/pdftotext'):
                 print("Detected xpdf library.")
