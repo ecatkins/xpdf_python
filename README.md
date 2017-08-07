@@ -33,9 +33,7 @@ If automatic installation of xpdf fails either:
 Supported by
 ------------
 
-<img src="dealstat-logo.png" width="100">
-
-[Dealstat REI](http://dealstatrei.com)
+<a href = "http://dealstatrei.com)"><img src="dealstat-logo.png" width="100"> </a>
 
 Operating Systems
 ------------
