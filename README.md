@@ -30,10 +30,6 @@ If automatic installation of xpdf fails either:
 1. Instructions for your OS found [here](http://www.foolabs.com/xpdf/download.html) OR 
 2. The bash scripts found in this repo's install_xpdf subdirectory
     
-Supported by
-------------
-
-<a href = "http://dealstatrei.com"><img src="dealstat-logo.png" width="100"> </a>
 
 Operating Systems
 ------------
@@ -48,5 +44,9 @@ Example
     pdf_location = '/path/to/my.pdf'
     text = to_text(pdf_location)
 
+Supported by
+------------
+
+<a href = "http://dealstatrei.com"><img src="dealstat-logo.png" width="100"> </a>
 
    
