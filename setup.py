@@ -22,8 +22,6 @@ with open(path.join(here, 'requirements.txt'), encoding='utf-8') as f:
 class XPDFInstall(install):
     def run(self):
         data = pkgutil.get_data('xpdf_python','install_xpdf/linux_install.sh')
-        print("QUEEE {}".format(data))
-        assert('break' == 'j')
         try:
             if path.isfile('/usr/local/bin/pdftotext'):
                 print("Detected xpdf library.")
