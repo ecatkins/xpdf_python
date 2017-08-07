@@ -33,7 +33,7 @@ def to_text(file_loc, page_nums = True, page_count = True):
 				continue
 			else:
 				actual_count += 1
-			text += 'Page {} {}'.format(actual, t)
+			text += '***Page {}*** {}'.format(actual, t)
 			file.close()
 	os.remove(saved_file)
 
