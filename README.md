@@ -34,9 +34,10 @@ Supported by
 ------------
 
 <img src="dealstat-logo.png" width="100">
-[Dealstat REI](http://www.dealstatrei.com)
 
-OS
+[Dealstat REI](http://dealstatrei.com)
+
+Operating Systems
 ------------
 
 macOS, Linux
