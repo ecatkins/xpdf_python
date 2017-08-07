@@ -10,7 +10,7 @@ python > 3.4
 Overview
 --------
 
-Python wrapper for xpdf
+Python wrapper for xpdf (currently just the "pdftotext" utility)
 
 Installation / Usage
 --------------------
