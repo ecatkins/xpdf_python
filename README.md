@@ -25,8 +25,7 @@ Or clone the repo:
     $ git clone https://github.com/ecatkins/xpdf_python.git
     $ python setup.py install
 
-
-If automatic installation of xpdf fails either:
+The package will attempt to automatically install xpdf. If this fails use either:
 1. Instructions for your OS found [here](http://www.foolabs.com/xpdf/download.html) OR 
 2. The bash scripts found in this repo's install_xpdf subdirectory
     
