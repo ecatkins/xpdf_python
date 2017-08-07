@@ -23,7 +23,7 @@ class XPDFInstall(install):
     def run(self):
         try:
             if path.isfile('/usr/local/bin/pdftotext'):
-                print("Detected xpdf library sure.")
+                print("Detected xpdf library.")
             else:
                 print("Did not detect xpdf library. Now attempting to install...")
                 if sys.platform.startswith('linux'):
