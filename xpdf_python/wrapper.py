@@ -70,4 +70,23 @@ def to_text(file_loc, page_nums = True):
 
 	return text, actual_count
 	
+def extract_images(file_loc):
+	''' Extracts images from PDF document
 
+	Args
+	- - - - - - -
+		file_loc: path to pdf document, string
+	
+	Returns
+	- - - - - - -
+		image_locs: location of saved images files, list
+	
+	'''
+	# Determines location of file
+	if os.path.isabs(file_loc):
+		full_file_loc = file_loc
+	else:
+		cd = os.path.dirname(os.path.realpath(__file__))
+		full_file_loc = os.path.join(cd, file_loc)
+
+	subprocess.call(['pdfimages'])
