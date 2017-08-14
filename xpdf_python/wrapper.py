@@ -32,7 +32,7 @@ def to_text(file_loc, page_nums = True):
 	if os.path.isabs(file_loc):
 		full_file_loc = file_loc
 	else:
-		cd = os.path.dirname(os.path.realpath(__file__))
+		cd = os.getcwd()
 		full_file_loc = os.path.join(cd, file_loc)
 
 	text = ''
@@ -86,7 +86,7 @@ def extract_images(file_loc):
 	if os.path.isabs(file_loc):
 		full_file_loc = file_loc
 	else:
-		cd = os.path.dirname(os.path.realpath(__file__))
+		cd = os.getcwd()
 		full_file_loc = os.path.join(cd, file_loc)
 
 	subprocess.call(['pdfimages'])
