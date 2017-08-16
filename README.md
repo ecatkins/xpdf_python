@@ -38,7 +38,7 @@ Operating Systems
 
 macOS, Linux
 
-Note: For Linux you may need to install the libxp6:
+Note: For Linux you may need to install the libxp6 library:
 
     sudo apt install libxp6 (Ubuntu)
     sudo yum install libXp.so.6 (Centos)
