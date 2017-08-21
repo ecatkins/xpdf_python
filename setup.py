@@ -31,7 +31,7 @@ class XPDFInstall(install):
                     bash_instructions = "sh -c cd /tmp/ && wget http://www.xpdfreader.com/dl/xpdf-tools-linux-4.00.tar.gz && tar -xvzf xpdf-tools-linux-4.00.tar.gz && sudo cp xpdf-tools-linux-4.00/bin64/* /usr/local/bin && sudo cp xpdf-tools-linux-4.00/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
                 elif sys.platform.startswith('darwin'):
                     bash_script = 'mac_install.sh'
-                    bash_instructions = "cd /tmp/ && wget ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-mac-3.04.tar.gz && tar -xvzf xpdfbin-mac-3.04.tar.gz && cp xpdfbin-mac-3.04/bin64/* /usr/local/bin && cp xpdfbin-mac-3.04/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
+                    bash_instructions = "cd /tmp/ && wget http://www.xpdfreader.com/dl/xpdf-tools-mac-4.00.tar.gz && tar -xvzf xpdf-tools-mac-4.00.tar.gz && cp xpdf-tools-mac-4.00/bin64/* /usr/local/bin && cp xpdf-tools-mac-4.00/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
 
                 # subprocess.call([bash_instructions])
                 system(bash_instructions)
