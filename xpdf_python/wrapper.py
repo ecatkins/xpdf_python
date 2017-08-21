@@ -48,7 +48,7 @@ def to_text(file_loc, page_nums = True):
 		for i in range(num):
 			actual = i + 1
 			# Calls xpdf 
-			subprocess.call(['pdftotext', full_file_loc, '-f', str(actual), '-l', str(actual)])
+			subprocess.call(['pdftotext', '-f', str(actual),'-l', str(actual), full_file_loc,  ])
 			# Opens file saved to disk 
 			saved_file = full_file_loc.replace('.pdf','.txt')
 			file = open(saved_file,'r', encoding = "ISO-8859-1")
