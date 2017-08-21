@@ -6,7 +6,7 @@ import subprocess
 from setuptools.command.install import install
 import pkgutil
 
-__version__ = '0.0.8'
+__version__ = '0.0.9'
 
 here = path.abspath(path.dirname(__file__))
 
