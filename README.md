@@ -5,7 +5,7 @@ version number: 0.0.7
 
 author: Edward Atkins
 
-python > 3.4
+python >= 3.4
 
 Overview
 --------
