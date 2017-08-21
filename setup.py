@@ -6,7 +6,7 @@ import subprocess
 from setuptools.command.install import install
 import pkgutil
 
-__version__ = '0.0.7'
+__version__ = '0.0.8'
 
 here = path.abspath(path.dirname(__file__))
 
@@ -28,7 +28,7 @@ class XPDFInstall(install):
                 print("Did not detect xpdf library. Now attempting to install...")
                 if sys.platform.startswith('linux'):
                     bash_script = 'linux_install.sh'
-                    bash_instructions = "sh -c cd /tmp/ && wget ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-linux-3.04.tar.gz && tar -xvzf xpdfbin-linux-3.04.tar.gz && cp xpdfbin-linux-3.04/bin64/* /usr/local/bin && cp xpdfbin-linux-3.04/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
+                    bash_instructions = "sh -c cd /tmp/ && wget http://www.xpdfreader.com/dl/xpdf-tools-linux-4.00.tar.gz && tar -xvzf xpdf-tools-linux-4.00.tar.gz && sudo cp xpdf-tools-linux-4.00/bin64/* /usr/local/bin && sudo cp xpdf-tools-linux-4.00/doc/sample-xpdfrc /usr/local/etc/xpdfrc"
                 elif sys.platform.startswith('darwin'):
                     bash_script = 'mac_install.sh'
                     bash_instructions = "cd /tmp/ && wget ftp://ftp.foolabs.com/pub/xpdf/xpdfbin-mac-3.04.tar.gz && tar -xvzf xpdfbin-mac-3.04.tar.gz && cp xpdfbin-mac-3.04/bin64/* /usr/local/bin && cp xpdfbin-mac-3.04/doc/sample-xpdfrc /usr/local/etc/xpdfrc"

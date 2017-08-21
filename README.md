@@ -1,7 +1,7 @@
 xpdf python
 ===============================
 
-version number: 0.0.7
+version number: 0.0.8
 
 author: Edward Atkins
 
